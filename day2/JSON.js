@@ -46,4 +46,25 @@ console.log(nbaObj["96 Bulls"][2].age)//age 3rd player on the 2nd team
 //PPG of the 2nd player on the first team
 console.log(nbaObj.Grizzlies[1].PPG)
 //sum the PPG of the Grizzlies
-console.log(nbaObj["Grizzlies"].reduce())
+//array reduce method
+console.log(nbaObj["Grizzlies"].reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.PPG;
+}, 0));
+
+//for loop
+let totalSum = 0;
+for (let i = 0; i < nbaObj.Grizzlies.length; i++) {
+    //console.log(nbaObj.Grizzlies[i].PPG);
+    totalSum += nbaObj.Grizzlies[i].PPG;
+    console.log(totalSum);
+    //adding how do
+}
+
+//while
+let i = 0;
+totalSum = 0;
+while (i < nbaObj.Grizzlies.length) {
+    totalSum += nbaObj.Grizzlies[i].PPG;
+    i++;
+}
+console.log(totalSum);
