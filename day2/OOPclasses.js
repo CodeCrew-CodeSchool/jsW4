@@ -56,3 +56,26 @@ console.log(JSON.stringify(nbaObj));
         { "name": "Ron Harper", "age": 32, "turnovers": 2.2, "PPG": 13.8 }
 }
 */
+
+//object functions or classes - same thing / different syntax
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.sayHello = function() {
+//         console.log(`My name is ${this.name} and I am ${this.age} years old.`);
+//     };
+// }
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    sayHello(){
+        console.log(`My name is ${this.name} and I am ${this.age} years old.`);
+    }
+}
+let Jiyah = new Person("Jiyah", 183984);
+
+let Isaiah = new Person("Isaiah", 74);
+Isaiah.sayHello();
